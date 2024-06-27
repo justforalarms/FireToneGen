@@ -27,7 +27,7 @@ void resetAll(){
     outputMute = 1;
 }
 void setFrequency(uint16_t hz1){
-    tonegen.frequencyRegister = pow(2,32)*hz1/16000;
+    tonegen.frequencyRegister = pow(2,32)*hz1/16000; // TODO: find out what the actual f*ck is wrong with this formula.
 }
 void setWaveform(uint8_t waveform){
     tonegen.waveformSelector = waveform;
@@ -110,7 +110,7 @@ void loop(void) {
     }
     if (!outputMute){
 
-        OCR1A = tonegen.outputBuffer;
+        OCR1A = tonegen.outputBuffer; // TODO: fix muting function
     } else {
         OCR1A = tonegen.outputBuffer;
     }
