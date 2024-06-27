@@ -9,5 +9,5 @@ You need one ATmega328p (as the tone generator) and another processor (that has 
 
 # How it works
 
-The main tone generator is a simple NCO. It's a simple "modulo M" counter (where M is how many counts it does before resetting. Or something like that :) )
-The result of the accumulator has the lower 24-bits masked off and the top 8-bits are used for the wavetable output.
+The main tone generator is a simple NCO. It's a simple "modulo M" counter (where M is how many counts it does before resetting. Or something like that :) )   
+The result of the accumulator has the lower 24-bits masked off and the top 8-bits are used for the wavetable output.   
